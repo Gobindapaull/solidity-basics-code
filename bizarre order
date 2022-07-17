@@ -8,3 +8,5 @@ contract TEST {
      emit Hello(a++, a, a, a);
   }
 }
+
+// c > a > b > d
