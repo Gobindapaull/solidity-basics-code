@@ -1,0 +1,10 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.15;
+
+contract TEST {
+ event Hello(uint indexed a, uint b, uint indexed c, uint d);
+ 
+  function fun(uint a) public {
+     emit Hello(a++, a, a, a);
+  }
+}
