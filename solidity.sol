@@ -10,6 +10,11 @@ address public txOrigin = tx.origin; // origin owner
   function fun(uint a) public {
      emit Hello(a++, a, a, a);
   }
+  
+  function getContractBalance() public view returns(uint256) {
+  return address(this).balance;
+  }
+  // contract balance
 }
 
 // c > a > b > d
