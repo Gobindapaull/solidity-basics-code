@@ -1,4 +1,4 @@
- function refund(address _payee, uint256 _amount) external payable override {
+ function refund(address _payee, uint256 _amount) external payable  {
         require(
             _payee != address(0),
             "refund::no payees can be the zero address"
@@ -19,7 +19,6 @@
     function payout(address[] calldata _splits, uint256[] calldata _amounts)
         external
         payable
-        override
     {
         uint256 totalAmount = 0;
 
