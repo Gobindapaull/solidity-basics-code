@@ -11,4 +11,10 @@ contract Synthetix {
         _totalSupply += amount;
         _balances[msg.sender] += amount;
     }
+    
+    function withdraw(uint amount) external {
+        require(amount > 0, "Cannot withdraw 0");
+        _totalSupply -= amount;
+        _balances[msg.sender] -= amount;
+    }
 }
