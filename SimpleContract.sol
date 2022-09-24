@@ -6,7 +6,7 @@ contract SimpleContract {
     
     uint public favouriteNumber;
 
-    function store(uint _favouriteNumber) public {
+    function store(uint _favouriteNumber) external {
         favouriteNumber = _favouriteNumber;
     }
 }
