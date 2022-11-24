@@ -10,3 +10,4 @@ contract Test {
         }
     }
 }
+// 22161 gas
