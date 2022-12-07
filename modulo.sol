@@ -8,4 +8,6 @@ contract Docs {
     int public q = int256(-5) % int256(-2); // -1
     
     uint public exp = 0 ** 0;
+    
+    address public owner = payable(0);
 }
