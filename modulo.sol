@@ -10,4 +10,7 @@ contract Docs {
     uint public exp = 0 ** 0;
     
     address public owner = payable(0);
+    
+    bytes32 b = 0x111122223333444455556666777788889999AAAABBBBCCCCDDDDEEEEFFFFCCCC;
+    address public addr = address(uint160(uint256(b)));
 }
