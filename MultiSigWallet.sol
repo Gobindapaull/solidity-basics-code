@@ -2,15 +2,36 @@
 pragma solidity ^0.8.18;
 
 contract MultiSigWallet {
+
     address[] public owners;
     uint256 public numConfirmationRequired;
-    mapping(address => bool) public isOwner;
 
+    // mapping
+    mapping(address => bool) public isOwner;
+    mapping(uint => mapping(address => bool)) public isConfirm;
+
+    // modifier
     modifier onlyOwner() {
         require(isOwner[msg.sender], "not owner");
         _;
     }
 
+    modifier txExist(uint _txIndex) {
+        require(_txIndex < transactions.length, "tx does not exist");
+        _;
+    }
+
+    modifier notExecuted(uint _txIndex) {
+        require(!transactions[_txIndex].executed, "tx already executed");
+        _;
+    }
+
+    modifier notConfirm(uint _txIndex) {
+        require(!isConfirm[_txIndex][msg.sender], "tx already confirm");
+        _;
+    }
+
+    // event
     event SubmitTx(
         address indexed owner,
         uint256 indexed txIndex,
@@ -19,6 +40,12 @@ contract MultiSigWallet {
         bytes32 data
     );
 
+    event ConfirmTransaction (
+        address indexed owner,
+        uint indexed txIndex
+    );
+
+    // struct
     struct Transaction {
         address to;
         uint256 value;
@@ -26,6 +53,7 @@ contract MultiSigWallet {
         bool executed;
         uint256 numConfirmations;
     }
+
 
     Transaction[] public transactions;
 
@@ -36,7 +64,7 @@ contract MultiSigWallet {
                 _numConfirmationRequired <= _owners.length,
             "Invalid number of confirmations"
         );
-        for (uint256 i = 0; i < _owners.length; i++) {
+        for (uint i = 0; i < _owners.length; i++) {
             owners = _owners[i];
             require(owners != address(0), "Invalid owners");
             require(!isOwner[owner], "owners not unique");
@@ -64,7 +92,15 @@ contract MultiSigWallet {
         emit SubmitTx(msg.sender, txIndex, _to, _value, _data);
     }
 
-    function confirmTx() public onlyOwner {}
+    function confirmTx(uint _txIndex) public onlyOwner txExist(_txIndex)
+    notExecuted(_txIndex) {
+        Transaction storage transaction = transactions[_txIndex];
+        transaction.numConfirmation += 1;
+        isConfirm[_txIndex][msg.sender] = true;
+
+        emit ConfirmTransaction(msg.sender, _txIndex);
+
+    }
 
     function executeTx() public onlyOwner {}
 
