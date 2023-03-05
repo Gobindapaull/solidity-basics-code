@@ -9,4 +9,14 @@ contract YUL {
         }
         return x;    
     }
+    function hexType() public pure returns (uint256, uint256) {
+        uint256 y;
+        uint256 z;
+
+        assembly {
+            y := 0xe
+            z := 0xf
+        }
+        return (y, z);
+    } 
 }
