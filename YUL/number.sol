@@ -9,6 +9,7 @@ contract YUL {
         }
         return x;    
     }
+    
     function hexType() public pure returns (uint256, uint256) {
         uint256 y;
         uint256 z;
@@ -19,4 +20,13 @@ contract YUL {
         }
         return (y, z);
     } 
+    
+    function stringType() public pure returns (string memory) {
+        bytes32 str = "";
+
+        assembly {
+            str := "Solidity Programming"
+        }
+        return string(abi.encode(str));
+    }
 }
