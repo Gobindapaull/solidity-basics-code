@@ -29,4 +29,11 @@ contract YUL {
         }
         return string(abi.encode(str));
     }
+        function boolType() public pure returns (bool) {
+        bool b;
+        assembly {
+            b := 0
+        }
+        return b;
+    }
 }
