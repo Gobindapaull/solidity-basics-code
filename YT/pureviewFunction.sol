@@ -20,4 +20,9 @@ contract Function {
     function pureFunc(uint x, uint y) public pure returns (uint) {
         return y + x;
     }
+    
+    function viewAdd(uint x) public view returns (uint) {
+        uint y = a; // 'a' state variable
+        return y + x;
+    }
 }
