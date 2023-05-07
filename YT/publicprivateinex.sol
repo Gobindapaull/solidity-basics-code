@@ -21,4 +21,13 @@ contract Advance {
     function externalFun() external pure returns (string memory) {
         return "External function"; // visible on etherscan/bscscan
     }
+
+    function example() external pure returns (string memory) {
+        privateFun();
+        publicFun();
+        internalFun();
+        // externalFun(); // not works here
+
+        return "working three function call";
+    }
 }
