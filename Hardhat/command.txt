@@ -1,0 +1,13 @@
+[✅] npm i -g npm@latest
+[✅] npm -v
+[✅] npm view hardhat
+[✅] npm i -D hardhat
+[✅] npx hardhat
+[✅] clear
+[✅] npx hardhat --version
+[✅] npx hardhat compile
+[✅] npx hardhat run scripts/deploy.js
+[✅] npx hardhat node
+[✅] npx hardhat run scripts/deploy.js --network localhost
+[✅] npx hardhat console --network localhost
+[✅] ethers
