@@ -1,0 +1,14 @@
+https://goerli.etherscan.io/tx/0xf67d1391f7a6a89d3456cd719baee4b36eb2979f0843d390921e9b000d84214b
+
+WETH Goerli
+0xb4fbf271143f4fbf7b91a5ded31805e42b2208d6
+
+eth to link swap goerli
+https://goerli.etherscan.io/tx/0x7869650b6fbb5d1e9eb91632feafc40bb664b5c738090a3aca1ae470cce3fca1
+
+LINK token goerli
+https://goerli.etherscan.io/token/0x326c977e6efc84e512bb9c30f76e30c160ed06fb
+
+eth to wei converter
+https://eth-converter.com/
+
