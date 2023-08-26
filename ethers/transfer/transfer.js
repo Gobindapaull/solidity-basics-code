@@ -13,7 +13,7 @@ const signer = wallet.connect(provider)
 const tokenContract = new ethers.Contract(tokenAddress, ABI, signer)
 
 const receiver = ethers.Wallet.createRandom().address
-const amount = 1000;
+const amount = 1000000000000000000000n;
 
 const start = async () => {
     const name = await tokenContract.name()
@@ -23,8 +23,9 @@ const start = async () => {
         const transfe = await tokenContract.transfer(receiver, amount)
         const transfer = await transfe.wait()
         console.log('Tx hash: ', transfer.hash)
-        console.log(`approved ${amount} tokens`)
+        console.log(`transfer ${amount} tokens`)
     }
+
 }
 start()
 
