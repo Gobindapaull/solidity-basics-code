@@ -14,3 +14,14 @@ contract Test {
     }
 
 }
+
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract Mapping {
+    mapping(uint => address) public idToAddress;
+
+    function idToAddr(uint a, address r) public returns (address) {
+        return idToAddress[a] = r;
+    }
+}
