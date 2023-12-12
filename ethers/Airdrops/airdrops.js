@@ -27,7 +27,6 @@ const amounts = [
       "5000000000000000000"
   ]
 
-  console.log(addresses.length == amounts.length)
 const privateKey = process.env.PRIVATE_KEY;
 const url = process.env.URL;
 const tokenAddress = process.env.TOKEN_ADDRESS;
