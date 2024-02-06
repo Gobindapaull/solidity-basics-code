@@ -1,0 +1,7 @@
+// SPDX-License-Identifier: MIT
+prgama solidity ^0.8.25;
+
+contract SmartContract {
+  address public owner = msg.sender;
+  }
+  
