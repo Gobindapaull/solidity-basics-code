@@ -1,0 +1,8 @@
+npm init -y
+npm i ethers dotenv
+touch index.js
+.env => PRIVATE_KEY, URL, TOKEN_ADDRESS
+abi.json
+
+
+node index.js
