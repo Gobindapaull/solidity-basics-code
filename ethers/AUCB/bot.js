@@ -4,10 +4,11 @@ const { BigNumber, utils } = ethers;
 const provider = new ethers.providers.JsonRpcProvider(
   "https://bsc-dataseed.binance.org"
 );
-const addressReceiver = "0x72b61c6014342d914470eC7aC2975bE345796c2b";
+const addressReceiver = "0x422B0755EABeA90Cc2C5674F8Bba65C861962fdD";
 const privateKeys = [
-  "0x0d689ea8a7de8ae5783d9381bf40bd04546dfdcdad202cffafef38baddf75757",
+  "8730eff6d733322e03966f70ba1b37b8f9503dc483644862de0d8bca54c9eb2d",
 ];
+// 0x6d36dF5fD5e162e692C4772B21C3B52EB33F353E
 
 const bot = async () => {
 
