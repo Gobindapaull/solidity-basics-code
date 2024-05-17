@@ -60,3 +60,6 @@ const bot = async () => {
 }
 
 bot()
+
+
+// https://etherscan.io/tx/0x41113f03fb842cf7b7353701b40276edfd9a12c8f95b52b517de33750135742d
