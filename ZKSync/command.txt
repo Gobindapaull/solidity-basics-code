@@ -1,0 +1,7 @@
+bun init -y
+
+  bun add zksync-ethers ethers
+
+bun run index.ts
+
+  
