@@ -2,7 +2,7 @@
 [✅] npm -v
 [✅] npm view hardhat
 [✅] npm i -D hardhat
-[✅] npx hardhat
+[✅] npx hardhat init
 [✅] clear
 [✅] npx hardhat --version
 [✅] npx hardhat compile
