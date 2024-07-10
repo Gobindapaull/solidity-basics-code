@@ -1,1 +1,2 @@
 bhadhar = 30 usdt > sweeper bot
+nolongting = 25 usdt > eth sweeper bot
