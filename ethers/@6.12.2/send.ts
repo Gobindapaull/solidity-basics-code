@@ -19,7 +19,8 @@ const main = async () => {
     try {
         const tx = {
             to: signer.address,
-            value: ethers.parseEther("0.00001")
+            value: ethers.parseEther("0.00001"),
+            data: ethers.hexlify(ethers.toUtf8Bytes("sending native token using ethers.js"))
         }
         const transaction = await signer.sendTransaction(tx)
         console.log('tx hash : ', transaction.hash)
