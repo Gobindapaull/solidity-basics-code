@@ -17,6 +17,7 @@ async function withdrawTRX() {
     try {
         // Check balance
         const balance = await tronWeb.trx.getBalance();
+        console.log(`balance : ${balance/1e6} TRX`)
         if (balance < AMOUNT_TO_WITHDRAW) {
             console.log('Insufficient balance');
             return;
