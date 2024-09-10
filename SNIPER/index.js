@@ -55,5 +55,5 @@ factoryContract.on("PairCreated", (token0, token1, e, amount) => {
     }
 })
 
-
+// https://bscscan.com/tx/0x199c4271e8c1b2bd18ab8183abbd2cdbfbc7892a394600da4c626299fbed2e7f
 // Sniper bot on bsc
