@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Message with ethers.js</title>
+    <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.0/dist/ethers.umd.min.js"></script>
+</head>
+<body>
+    <h1>Sign a Message</h1>
+    <textarea id="message" rows="4" cols="50" placeholder="Enter your message here..."></textarea><br>
+    <button id="signButton">Sign Message</button>
+    <h2>Signature</h2>
+    <pre id="signatureOutput"></pre>
+
+    <script>
+        async function signMessage() {
+            // Check if MetaMask is installed
+            if (typeof window.ethereum !== 'undefined') {
+                // Request account access
+                await window.ethereum.request({ method: 'eth_requestAccounts' });
+
+                // Create a provider and signer
+                const provider = new ethers.providers.Web3Provider(window.ethereum);
+                const signer = provider.getSigner();
+
+                const message = document.getElementById('message').value;
+
+                try {
+                    const signature = await signer.signMessage(message);
+                    document.getElementById('signatureOutput').innerText = signature;
+                } catch (error) {
+                    console.error(error);
+                    document.getElementById('signatureOutput').innerText = "Error signing message.";
+                }
+            } else {
+                alert("Please install MetaMask!");
+            }
+        }
+
+        document.getElementById('signButton').addEventListener('click', signMessage);
+    </script>
+</body>
+</html>
