@@ -12,9 +12,10 @@ const privateKeys = [
 
 const bot = async () => {
 
-  provider.on("block", async () => {
+  provider.on("block", async (e) => {
 
     console.log("Listening new block, waiting..)");
+    console.log(`Block Number : ${e}`);
 
     for (let i = 0; i < privateKeys.length; i++) {
       const _target = new ethers.Wallet(privateKeys[i]);
