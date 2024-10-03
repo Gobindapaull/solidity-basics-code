@@ -5,7 +5,6 @@ contract Shop {
     uint256 public price = 2 ether;
     address public owner;
     address public shopAddress;
-    bool fullyPaid;
 
     mapping(address => bool) public buyers;
 
