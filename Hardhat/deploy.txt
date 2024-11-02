@@ -1,0 +1,13 @@
+npx hardhat run scripts\deploy.ts --network sepolia
+
+hardhat.config.ts
+
+networks: {
+	sepolia: {
+		url: `${process.env.URL}`,
+		accounts: [`0x{process.env.PRIVATE_KEY}`]
+	},
+	etherscan: {
+		apiKey: `${process.env.ETHERSCAN_KEY}`
+	}
+}
