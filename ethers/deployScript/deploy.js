@@ -9,8 +9,16 @@ async function deploy() {
     const factory = new ethers.ContractFactory(Counter.abi, Counter.data.bytecode, wallet);
     const counter = await factory.deploy(123);
 
-    const contractDeploy = await counter.waitForDeployment();
-    console.log(await contractDeploy.getAddress()); // 0x3790D741B0b61ca46066015434587d0177427d71
+     const contractDeploy = await counter.waitForDeployment();
+    console.log(`deployed contract address : ${await contractDeploy.getAddress()}`); // 0xbAa4c3b6eE46119B455cB2496e9cecdbF2D11E40
+
+    const count = await contractDeploy.getCount();
+    console.log(`Initial count : ${count}`);
+
+    const increment = await contractDeploy.increment();
+    await increment.wait();
+    const incrementCount = await contractDeploy.getCount();
+    console.log(`new count : ${incrementCount}`);
 }
 
 deploy();
