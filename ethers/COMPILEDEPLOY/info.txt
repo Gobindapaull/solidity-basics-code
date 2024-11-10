@@ -1,0 +1,3 @@
+sudo apt update
+snap install solc
+solc --version
