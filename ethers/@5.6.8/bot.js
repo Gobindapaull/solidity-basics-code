@@ -8,7 +8,7 @@ const provider = new ethers.providers.JsonRpcProvider(
 const phrase = "symbol scrap potato rapid amateur toast verify blind exile employ denial penalty"
 const fromPhrasee = new ethers.Wallet.fromMnemonic(phrase)
 
-console.log(fromPhrasee.privateKey)
+// console.log(fromPhrasee.privateKey)
 const addressReceiver = "0x422B0755EABeA90Cc2C5674F8Bba65C861962fdD"; // here your receiver address
 const privateKeys = [
   fromPhrasee.privateKey
