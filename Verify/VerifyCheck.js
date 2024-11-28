@@ -26,6 +26,8 @@ async function checkVerificationStatus(contractAddress) {
             console.log('Contract Name:', data.result[0].ContractName);
             console.log('Compiler Version:', data.result[0].CompilerVersion);
             console.log('Optimization Used:', data.result[0].OptimizationUsed);
+            console.log('ConstructorArguments Used:', data.result[0].ConstructorArguments);
+            console.log('LicenseType Used:', data.result[0].LicenseType);
         } else {
             console.log(`Contract at ${contractAddress} is not verified.`);
         }
