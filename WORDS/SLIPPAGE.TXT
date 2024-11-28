@@ -1,0 +1,1 @@
+To include slippage tolerance in your bot, you must calculate the minimum amount of ETH you'll accept from the swap based on the current exchange rate. This ensures the transaction does not proceed if the price moves beyond your acceptable range during execution.
