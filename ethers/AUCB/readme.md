@@ -6,5 +6,5 @@
 
 [4] Terminal > node index
 
-# cp index.js index2.js
+* cp index.js index2.js
 
