@@ -7,7 +7,8 @@
   "license": "MIT",
   "scripts": {
     "build": "npx tsc",
-    "start": "yarn build && pm2 start dist/index.js --name ethBurner2"
+    "start": "yarn build && pm2 start dist/index.js --name ethBurner2",
+    "dev": "yarn build && node dist/index.js"
   },
   "devDependencies": {
     "@types/node": "^16.11.11",
