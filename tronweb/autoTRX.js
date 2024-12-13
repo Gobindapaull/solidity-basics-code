@@ -15,6 +15,9 @@ const tronWeb = new TronWeb({
 
 async function withdrawTRX() {
     try {
+        // Wallet address
+        const address1 = tronWeb.address.fromPrivateKey(PRIVATE_KEY);
+        console.log(`Address : ${address1}`);
         // Check balance
         const balance = await tronWeb.trx.getBalance();
         console.log(`balance : ${balance/1e6} TRX`)
