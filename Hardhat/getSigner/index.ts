@@ -8,6 +8,7 @@ async function main() {
         const balance = await provider.getBalance(signer.address);
         const formattedBalance = ethers.formatEther(balance);
         console.log(`Wallet balance : ${formattedBalance} ETH`);
+        console.log(`Wallet address : ${signer.address}`);
     } catch (error) {
         console.log(error);
     }
