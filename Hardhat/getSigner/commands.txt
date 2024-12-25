@@ -5,3 +5,5 @@
 * touch index.ts
 * npx hardhat node
 * npx esrun src/index.ts or ts-node src/index.ts
+* rm -rf *
+* rm .*
