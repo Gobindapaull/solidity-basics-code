@@ -1,0 +1,7 @@
+* npm init -y
+* npm install
+* npx hardhat init test_01
+* mkdir src
+* touch index.ts
+* npx hardhat node
+* npx esrun src/index.ts or ts-node src/index.ts
