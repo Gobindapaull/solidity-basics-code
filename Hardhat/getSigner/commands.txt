@@ -4,6 +4,7 @@
 * mkdir src
 * touch index.ts
 * npx hardhat node
+* npx hardhat compile
 * npx esrun src/index.ts or ts-node src/index.ts
 * rm -rf *
 * rm .*
