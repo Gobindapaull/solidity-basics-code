@@ -6,6 +6,6 @@
 * npx hardhat node
 * npx hardhat compile
 * npx hardhat ignition deploy ./ignition/modules/Lock.ts --network localhost
-* npx esrun src/index.ts or ts-node src/index.ts
+* npx esrun src/index.ts or ts-node src/index.ts or npx ts-node src/index.ts
 * rm -rf *
 * rm .*
