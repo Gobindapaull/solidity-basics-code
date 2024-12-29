@@ -1,6 +1,6 @@
-* npm init -y
+* npx hardhat init .
+* paste package.json file
 * npm install
-* npx hardhat init test_01
 * mkdir src
 * touch index.ts
 * npx hardhat node
