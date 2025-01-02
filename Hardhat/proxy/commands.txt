@@ -1,0 +1,5 @@
+// https://sepolia.etherscan.io/address/0x6d67b6155d451f92df440257ead14ecfbc20c2ba#readProxyContract
+
+* npx hardhat run srcipts/createTriple.ts --network sepolia
+* npx hardhat verify --network sepolia <contract address>
+
