@@ -29,3 +29,5 @@
 * npx hardhat vars set PRIVATE_KEY safjlksd;jfkjffjfjfjfjfjfjj
 * npx hardhat vars get ETHERSCAN_API_KEY
 * npx hardhat vars delete ETHERSCAN_API_KEY
+* npx hardhat compile
+* npx hardhat ignition deploy ./ignition/modules/Lock.ts --network sepolia --deployment-id sepolia-deployment
