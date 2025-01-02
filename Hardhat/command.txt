@@ -11,3 +11,16 @@
 [✅] npx hardhat run scripts/deploy.js --network localhost
 [✅] npx hardhat console --network localhost
 [✅] ethers
+
+
+* npx hardhat init .
+* paste package.json file
+* npm install
+* mkdir src
+* touch index.ts
+* npx hardhat node
+* npx hardhat compile
+* npx hardhat ignition deploy ./ignition/modules/Lock.ts --network localhost
+* npx esrun src/index.ts or ts-node src/index.ts or npx ts-node src/index.ts
+* rm -rf *
+* rm .*
