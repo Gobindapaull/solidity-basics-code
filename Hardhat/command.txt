@@ -26,3 +26,4 @@
 * rm .*
 
 * npx hardhat vars set ETHERSCAN_API_KEY dslfjsjdlfjslkfljsdlfjlskdjflksdjflkjsdlkj
+* npx hardhat vars get ETHERSCAN_API_KEY
