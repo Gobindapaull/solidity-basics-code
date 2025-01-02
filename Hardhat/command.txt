@@ -24,3 +24,5 @@
 * npx esrun src/index.ts or ts-node src/index.ts or npx ts-node src/index.ts
 * rm -rf *
 * rm .*
+
+* npx hardhat vars set ETHERSCAN_API_KEY dslfjsjdlfjslkfljsdlfjlskdjflksdjflkjsdlkj
