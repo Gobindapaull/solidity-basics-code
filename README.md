@@ -1,5 +1,6 @@
-solidity programming
+Solidity programming
 
+Smart Contracts
 
 delete all files and folders
 
