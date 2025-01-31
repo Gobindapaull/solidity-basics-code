@@ -16,4 +16,9 @@ contract Structs {
         userInfo[index] = User(_name, _age, true);
         index++;
     }
+
+    function modifyInfo(uint _id, string memory _name, uint _age) public {
+        userInfo[_id].name = _name;
+        userInfo[_id].age = _age;
+    }
 }
