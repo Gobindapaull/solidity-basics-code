@@ -1,5 +1,6 @@
 const array = Array.from({ length: 10000 }, () => "1000000");
 console.log(array);
+console.log(array.length)
 
 // [
 //     '1000000', '1000000', '1000000', '1000000', '1000000', '1000000',
