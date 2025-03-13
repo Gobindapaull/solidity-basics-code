@@ -1,2 +1,0 @@
-- https://youtu.be/5a5VAZIRt4s?si=TIqlwXsjZJ7qTwlU
-- "@solana/web3.js": "^1.98.0"
