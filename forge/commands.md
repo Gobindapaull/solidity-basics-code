@@ -1,0 +1,4 @@
+- forge init .
+- forge install uniswap/v4-core --no-commit
+- forge install uniswap/v4-periphery --no-commit
+- forge install Openzeppelin/openzeppelin-contracts --no-commit
