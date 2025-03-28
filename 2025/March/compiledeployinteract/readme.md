@@ -1,0 +1,5 @@
+- npm install -g solc
+- npx solc --version
+- npx solc --bin --abi TimeLock.sol -o build
+- node deploy.js
+- node Interact.js
