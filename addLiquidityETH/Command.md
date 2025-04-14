@@ -14,6 +14,7 @@ Instrcutions
 - ETH balance check = node balance.js
 - Token balance check = node tokenBalance.js
 - Token transfer = node tokenTransfer.js
+- Airdrop tokens = node airdrop.js
 
 
 Problems solution
