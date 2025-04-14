@@ -1,2 +1,3 @@
 - SwapExactETHForTokens()
-- 
+- balanceOf()
+- transfer()
