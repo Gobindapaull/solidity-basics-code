@@ -11,6 +11,9 @@ Instrcutions
 - Contract address = 0x1a62C4c8D94c5D47B61917E92fE101D698Fc1Cd1
 - Add Liquidity = node addLiquidity.js
 - Swap tokens = node swap.js
+- ETH balance check = node balance.js
+- Token balance check = node tokenBalance.js
+- Token transfer = node tokenTransfer.js
 
 
 Problems solution
