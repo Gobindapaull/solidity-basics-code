@@ -1,0 +1,2 @@
+- npx solc --bin ContractName.sol
+- node checkSize.js
