@@ -22,6 +22,9 @@ const interact = async () => {
     console.log(`Message Sent, tx hash : ${tx.hash}`);
     // Message Sent, tx hash : 0x7385c72c05869b13244c9f45c484d7093ca6496882b020007692d17102f1d3d9
     // 0x476f6f6420627965000000000000000000000000000000000000000000000000 Good bye
+
+    const balance = await contract.getBalance();
+    console.log(`balance : ${ethers.formatEther(balance)}`);
 };
 
 interact()
