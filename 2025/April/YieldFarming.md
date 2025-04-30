@@ -4,9 +4,21 @@ stakingToken
 rewardToken
 
 stake( )
+
+
 unstake( )
+
+
 claimRewards( )
+
+
 emergencyWithdraw( )
+
+
 refillRewards( )
+
+
 updateRewards( )
+
+
 pendingRewards( )
