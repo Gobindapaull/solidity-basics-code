@@ -23,6 +23,7 @@ const bot = async () => {
         for (let i = 0; i < addresses.length; i++) {
 
             const balance = await token.balanceOf(addresses[i]);
+            console.log(`wallet balance : ${balance} tokens`)
 
             if (balance.gt(0)) {
 
