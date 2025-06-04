@@ -229,12 +229,15 @@ const volumeBot = async () => {
             console.log(`⏳ Sleeping for ${delaySeconds} seconds ...`);
 
             await sleep(delaySeconds * 1000);
+            console.log(`--------------------------------------------------------------------------------`)
 
             // sell tokens
             await sellTokens(newWallet.privateKey);
+            console.log(`--------------------------------------------------------------------------------`)
 
             // Convert USDT to BNB
             await sellUSDT();
+            console.log(`--------------------------------------------------------------------------------`)
 
             console.log(`⏳ Sleeping for ${delaySeconds} seconds ...`);
             await sleep(delaySeconds * 1000);
@@ -247,3 +250,7 @@ const volumeBot = async () => {
 };
 
 volumeBot();
+
+
+
+
