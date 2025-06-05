@@ -49,7 +49,7 @@ async function sellTokens(_newWallet) {
 
         console.log("🔄 Executing token swap...");
         const swapTx = await dexContract.swapExactTokensForTokensSupportingFeeOnTransferTokens(
-            balance,
+            balance - ethers.parseUnits("1", 18),
             amountOutMin,
             path,
             process.env.RECEIVER_ADDRESS,
