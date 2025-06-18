@@ -18,6 +18,7 @@
 * touch bot.js
 
 
+VPS 
 
 - cat /etc/os-release
 - sudo dnf clean all
