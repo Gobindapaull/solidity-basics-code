@@ -39,10 +39,12 @@ provider.on("block", async (e) => {
             });
             console.log(`Success! Transferred --> ${ethers.formatEther(amount)} BNB`);
             console.log(`Transaction hash : ${tx.hash}`);
+            console.log(`-------------------------------------------------------------------------------------------`);
         } catch (error) {
             console.log(`Transaction error: ${error}`);
         }
     } else {
         console.log(`Not enough balance to cover gas fees`);
+        console.log(`-------------------------------------------------------------------------------------------`);
     }
 });
