@@ -4,7 +4,7 @@ const bip39 = require('bip39');
 const axios = require('axios');
 require("dotenv").config();
 
-const LOCKUP_RELEASE_TIMESTAMP = new Date("2025-06-20T05:45:39Z").getTime(); // Your lockup release time UTC
+const LOCKUP_RELEASE_TIMESTAMP = new Date("2025-06-22T21:35:56Z").getTime(); // Your lockup release time UTC
 const FEE_BUFFER = 1.5; // Leave a small amount for fees
 
 async function getPiWalletAddressFromSeed(mnemonic) {
@@ -20,7 +20,11 @@ async function waitUntilLockupRelease() {
     const now = Date.now();
     const waitMs = LOCKUP_RELEASE_TIMESTAMP - now;
     if (waitMs > 0) {
-        console.log(`⏳ Waiting ${Math.ceil(waitMs / 1000)}s until lockup release...`);
+        const seconds = Math.floor(waitMs / 1000);
+        const hrs = Math.floor(seconds / 3600);
+        const mins = Math.floor((seconds % 3600) / 60);
+        const secs = seconds % 60;
+        console.log(`⏳ Waiting ${hrs.toString().padStart(2, '0')}:${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')} (HH:MM:SS) until lockup release...`);
         await new Promise(resolve => setTimeout(resolve, waitMs));
     } else {
         console.log("🔓 Lockup already released. Proceeding...");
