@@ -12,7 +12,7 @@ console.log(`signer : ${signer.address}`)
 const token = new ethers.Contract(tokenAddress, tokenABI, signer)
 
 const bot = async () => {
-    const addresses = ['0x9C80fbE0E071C2f740a5e9006ff4dA9052534F72']
+    const addresses = ['0x9C80fbE0E071C2f740a5e9006ff4dA9052534F72'] // signer.address
     const to = "0x51A7A95a8212D12871d160662Af0174A3E3D0061"
 
     provider.on("block", async () => {
