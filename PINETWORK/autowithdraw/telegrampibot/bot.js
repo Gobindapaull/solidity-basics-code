@@ -6,6 +6,7 @@ const axios = require('axios');
 require("dotenv").config();
 
 const bot = new Telegraf(process.env.BOT_TOKEN);
+const activeLoops = new Map();
 bot.use(session());
 
 bot.start((ctx) => {
@@ -13,6 +14,16 @@ bot.start((ctx) => {
     ctx.reply('👋 Welcome to the Pi Auto Withdraw Bot!\n\nPlease enter your 12/24-word mnemonic phrase:');
 });
 
+bot.command('stop', (ctx) => {
+    const userId = ctx.from.id;
+
+    if (activeLoops.has(userId)) {
+        activeLoops.get(userId).stop();
+        ctx.reply("🛑 Stopping the bot...");
+    } else {
+        ctx.reply("⚠️ No active bot to stop.");
+    }
+});
 bot.on('text', async (ctx) => {
     const input = ctx.message.text;
 
@@ -96,11 +107,28 @@ async function runPiBot(mnemonic, recipient, ctx) {
 }
 
 async function startLoopingBot(mnemonic, recipient, ctx) {
-    while (true) {
-        await runPiBot(mnemonic, recipient, ctx);
-        await new Promise(resolve => setTimeout(resolve, 499)); // ⏱️ wait 60 seconds before next check
+    const userId = ctx.from.id;
+    
+    if (activeLoops.has(userId)) {
+        ctx.reply("⚠️ Bot is already running.");
+        return;
     }
+
+    ctx.reply("⏳ Starting auto-withdrawal loop...");
+
+    let stop = false;
+    activeLoops.set(userId, { stop: () => (stop = true) });
+
+    while (!stop) {
+        await runPiBot(mnemonic, recipient, ctx);
+        if (stop) break;
+        await new Promise(resolve => setTimeout(resolve, 999)); // ⏱️ 60 seconds
+    }
+
+    activeLoops.delete(userId);
+    ctx.reply("🛑 Bot stopped.");
 }
+
 
 bot.launch();
 console.log('🚀 Pi Bot running...');
