@@ -1,0 +1,5 @@
+- npm init -y
+- npm i solc ethers
+- node compile.js
+- node deploy.js
+- node spin.js
