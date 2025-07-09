@@ -1,0 +1,5 @@
+- npm init -y
+- npm i ethers dotenv solc
+- node compile.js
+- node deploy.js
+- node retrive.js
