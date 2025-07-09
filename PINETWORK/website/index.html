@@ -1,0 +1,98 @@
+<!-- Save this as public/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>🚀 Pi Auto Withdraw Bot</title>
+  <style>
+    body {
+      background: #0f0f0f;
+      color: #ffffff;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: #1c1c1c;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 2px solid #444;
+    }
+    h1 {
+      margin: 0;
+      font-size: 26px;
+    }
+    .container {
+      padding: 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+    .card {
+      background: #1f1f1f;
+      border: 1px solid #333;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+    .label {
+      font-weight: bold;
+      color: #00ffcc;
+    }
+    .value {
+      font-family: monospace;
+      color: #ffffff;
+    }
+    .success {
+      color: #00ff7f;
+    }
+    .error {
+      color: #ff4d4d;
+    }
+    a {
+      color: #00ffff;
+    }
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: #111;
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🔁 Pi Auto Withdraw Bot</h1>
+    <p>By <a href="https://t.me/autoboyt" target="_blank">@autoboyt</a></p>
+  </header>
+
+  <div class="container">
+    <div class="card"><span class="label">💰 Pi Balance:</span> <div class="value" id="balance">Loading...</div></div>
+    <div class="card"><span class="label">➡️ Amount Sent:</span> <div class="value" id="amount">Loading...</div></div>
+    <div class="card"><span class="label">✅ Status:</span> <div class="value" id="status">Loading...</div></div>
+    <div class="card"><span class="label">🔗 Tx Hash:</span> <div class="value" id="txhash">Loading...</div></div>
+  </div>
+
+  <footer>&copy; 2025 Pi Auto Bot | Powered by Stellar SDK</footer>
+
+  <script>
+    async function loadData() {
+      try {
+        const res = await fetch('http://localhost:3000/api/status');
+        const data = await res.json();
+        document.getElementById("balance").innerText = data.balance + " Pi";
+        document.getElementById("amount").innerText = data.amountSent + " Pi";
+        document.getElementById("status").innerText = data.status;
+        document.getElementById("txhash").innerHTML = data.txHash
+          ? `<a href="https://api.mainnet.minepi.com/transactions/${data.txHash}" target="_blank">${data.txHash}</a>`
+          : "—";
+      } catch (e) {
+        document.getElementById("status").innerText = "Error loading data";
+      }
+    }
+
+    setInterval(loadData, 999);
+    loadData();
+  </script>
+</body>
+</html>
