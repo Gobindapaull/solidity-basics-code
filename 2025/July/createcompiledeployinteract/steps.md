@@ -1,0 +1,5 @@
+- npm init -y
+- npm i ethers solc dotenv
+- node compile
+- node deploy
+- node interact
