@@ -119,6 +119,10 @@ async function main() {
   const waitResponse = await bundleResponse.wait();
   console.log(`Bundle response : ${waitResponse}`);
 
+  // const receipts = await bundleResponse.receipts();
+  // console.log(receipts);
+
+
 }
 
 main();
