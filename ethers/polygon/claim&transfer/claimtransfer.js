@@ -8,7 +8,7 @@ console.log(`wallet address: ${wallet.address}`);
 
 provider.on("block", async (e) => {
     console.log(`block: ${e}`);
-    
+
     const contractAddress = "0x5bdf9D655f12A16081e0Ef7FD58b22b6269cF3f1"; // the contract where claim() exists
 
     const selector = process.env.SELECTOR;
@@ -21,22 +21,28 @@ provider.on("block", async (e) => {
     const data = selector + recipient + amount;
     console.log(`calldata : ${data}`);
 
-    // claim tx
+    // 1. Claim transaction
     const claimTx = await wallet.sendTransaction({
         to: contractAddress,
         data: "0x4e71d92d", // claim() selector
-        value: 0n // usually no ETH is needed
+        value: 0n, // usually no ETH is needed
+        gasLimit:  600000n,
+        maxFeePerGas: ethers.parseUnits("51", "gwei"),
+        maxPriorityFeePerGas: ethers.parseUnits("6", "gwei")
     });
 
     await claimTx.wait();
     console.log("Tx Hash:", claimTx.hash);
     console.log("Claim executed successfully!");
 
-    // transfer tx
+    // 2. Transfer transaction
     const tx = await wallet.sendTransaction({
         to: tokenAddress,
         data: data,
-        value: 0n
+        value: 0n,
+        gasLimit: 100001n,
+        maxFeePerGas: ethers.parseUnits("101", "gwei"),
+        maxPriorityFeePerGas: ethers.parseUnits("7", "gwei")
     });
 
     await tx.wait();
@@ -44,3 +50,7 @@ provider.on("block", async (e) => {
     console.log("Transaction confirmed");
 
 })
+
+
+
+
