@@ -14,7 +14,7 @@ provider.on("block", async (e) => {
     const tokenAddress = "0x1Bdf71EDe1a4777dB1EebE7232BcdA20d6FC1610";
     const recipient = "0xb700DaeA990aefBeDB36f109F9989Ab87A86601d".replace("0x", "").padStart(64, "0");
     console.log(recipient);
-    const amount = BigInt(1e18).toString(16).padStart(64, "0"); // 1 token
+    const amount = BigInt(process.env.AMOUNT * 1e18).toString(16).padStart(64, "0"); // 1 token
     console.log(amount)
 
     const data = selector + recipient + amount;
