@@ -1,8 +1,9 @@
 const { ethers } = require("ethers");
+require('dotenv').config();
 
-const provider = new ethers.JsonRpcProvider("https://1rpc.io/matic");
-const wallet = new ethers.Wallet("0x0000000000000000000000000000000000000000000000000000000000000001", provider);
-console.log(`wallet address: ${wallet.address}`); // 0x7E5F4552091A69125d5DfCb7b8C2659029395Bdf
+const provider = new ethers.JsonRpcProvider(process.env.RPC_URL);
+const wallet = new ethers.Wallet(process.env.PRIVATE_KEY, provider);
+console.log(`wallet address: ${wallet.address}`);
 
 
 
