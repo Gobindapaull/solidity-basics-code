@@ -8,6 +8,8 @@ Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
 
 delete all files and folders
 
+- npm init -y && npm i ethers && nano token.js
+
 - rm -rf * {.*,*}
 - rm -f bot.js
 - rm -f *.js
