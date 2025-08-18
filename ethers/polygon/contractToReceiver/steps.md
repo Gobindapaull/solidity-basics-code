@@ -3,3 +3,4 @@
 - node compile
 - node deploy
 - node pol
+- https://polygonscan.com/address/0x042b35c0e946ea78d81684c82ab2464a00c5564c
