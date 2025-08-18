@@ -1,0 +1,5 @@
+- npm init -y
+- npm i
+- node compile
+- node deploy
+- node pol
