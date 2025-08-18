@@ -1,0 +1,4 @@
+- curl -L https://foundry.paradigm.xyz | bash
+- forge --version
+- forge init
+- rm -rf * *.*
