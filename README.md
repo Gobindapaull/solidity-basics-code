@@ -14,3 +14,7 @@ delete all files and folders
 - rm -f bot.js
 - rm -f *.js
 - zip -e filename.zip * .*
+
+- npm init -y
+- npm i @uniswap/v4-sdk @uniswap/sdk-core
+- npm ls ethers
