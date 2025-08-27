@@ -1,0 +1,3 @@
+- npm ls ethers
+- sudo npm install -g pm2
+- pm2 -v
