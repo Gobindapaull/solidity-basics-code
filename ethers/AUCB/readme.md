@@ -25,3 +25,4 @@ VPS
 - free -h
 - ssh-keygen -R 203.161.48.203
 
+AlmaLinux = > .env
