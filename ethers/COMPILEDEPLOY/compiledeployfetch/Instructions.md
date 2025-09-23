@@ -1,5 +1,6 @@
 - npm init -y
 - npm i ethers dotenv solc
+- npm install @openzeppelin/contracts
 - node compile.js
 - node deploy.js
 - node retrive.js
