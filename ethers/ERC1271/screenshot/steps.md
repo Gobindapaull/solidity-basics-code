@@ -1,0 +1,6 @@
+- npm init -y
+- npm i @openzeppelin/contracts dotenv ethers solc
+- ContractWallet.sol
+- node compile.js
+- node deploy.js
+- node sign.js
