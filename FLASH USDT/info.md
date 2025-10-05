@@ -6,3 +6,8 @@
 
 - Don't fall for it. It is a scam
 - https://youtu.be/c0kfcJ5DMmo?si=HuQ3boWu4Lb2usjO
+
+- npx hardhat --init
+- npx hardhat node --network hardhatMainnet
+
+- https://youtu.be/7o_zwzP4gIE?si=VxEMrPKizPvkaxHo
