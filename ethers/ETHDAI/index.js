@@ -3,7 +3,7 @@ const ethers = require("ethers");
 const provider = new ethers.JsonRpcProvider("https://eth.llamarpc.com");
 const routerAddress = "0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D";
 const iface = new ethers.Interface([
-    "function getAmountsOut(uint256, address[]) view returns (uint256[])"
+    "function getAmountsOut(uint256, address[]) public view returns (uint256[])"
 ]);
 const amountIn = ethers.parseEther("2");
 const path = [
