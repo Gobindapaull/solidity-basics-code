@@ -14,15 +14,15 @@
 
 ---------------------------------------------------------------------------------------------------------
 
-npm init -y
-npm install --save-dev hardhat
-npx hardhat --init
-edit hardhat.config.ts
+- npm init -y
+- npm install --save-dev hardhat
+- npx hardhat --init
+- edit hardhat.config.ts
 
-Metamask Custom Network set up
+- Metamask Custom Network set up
 
-Ethereum
-http://127.0.0.1:8545/
-31337
-ETH
+- Ethereum
+- http://127.0.0.1:8545/
+- 31337
+- ETH
 ---------------------------------------------------------------------------------------------------------
