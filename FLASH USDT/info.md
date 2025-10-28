@@ -11,3 +11,18 @@
 - npx hardhat node --network hardhatMainnet
 
 - https://youtu.be/7o_zwzP4gIE?si=VxEMrPKizPvkaxHo
+
+---------------------------------------------------------------------------------------------------------
+
+npm init -y
+npm install --save-dev hardhat
+npx hardhat --init
+edit hardhat.config.ts
+
+Metamask Custom Network set up
+
+Ethereum
+http://127.0.0.1:8545/
+31337
+ETH
+---------------------------------------------------------------------------------------------------------
