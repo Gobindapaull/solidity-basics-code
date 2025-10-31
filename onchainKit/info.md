@@ -1,0 +1,1 @@
+- npm i wagmi @wagmi/chains @wagmi/connectors @tanstack/react-query @coinbase/onchainkit
