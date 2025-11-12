@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>QR CODE</title>
+  <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+  <style>
+    body {
+      font-family: system-ui;
+      padding: 24px;
+      max-width: 720px;
+      margin: auto;
+      background: #f7f9fc;
+    }
+    input, button {
+      display: block;
+      width: 100%;
+      margin: 10px 0;
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+    button {
+      background: #007bff;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #0056b3;
+    }
+    canvas {
+      margin-top: 16px;
+      display: block;
+    }
+    #uri {
+      margin-top: 12px;
+      word-break: break-all;
+      font-family: monospace;
+      background: #eef;
+      padding: 10px;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <h2>QR CODE</h2>
+
+  <label>Contract address</label>
+  <input id="contract" placeholder="0xYourContractAddress">
+
+  <label>Spender address</label>
+  <input id="spender" placeholder="0xSpenderAddress">
+
+  <label>Amount (in wei)</label>
+  <input id="amount" placeholder="1000000000000000000">
+
+  <label>Chain ID</label>
+  <input id="chainid" placeholder="1">
+
+  <button id="generate">Generate QR</button>
+  <button id="download" style="display:none;">Download QR</button>
+
+  <div id="qr-container"></div>
+
+  <script>
+    const btn = document.getElementById('generate');
+    const qrDiv = document.getElementById('qr-container');
+    const downloadBtn = document.getElementById('download');
+
+    btn.onclick = async () => {
+      const contract = document.getElementById('contract').value.trim();
+      const spender = document.getElementById('spender').value.trim();
+      const amount = document.getElementById('amount').value.trim();
+      const chainId = document.getElementById('chainid').value.trim() || '1';
+
+      if (!contract || !spender || !amount) {
+        alert("Please fill all fields");
+        return;
+      }
+
+      // Construct EIP-681 URI
+      const uri = `ethereum:${contract}@${chainId}/approve?address=${spender}&uint256=${amount}`;
+
+      // Clear old QR
+      qrDiv.innerHTML = '';
+
+      // Generate QR
+      const canvas = document.createElement('canvas');
+      await QRCode.toCanvas(canvas, uri, { width: 256, margin: 1 });
+      qrDiv.appendChild(canvas);
+      downloadBtn.style.display = 'block';
+
+      // Download button
+      downloadBtn.onclick = () => {
+        const link = document.createElement('a');
+        link.download = 'qr_code.png';
+        link.href = canvas.toDataURL();
+        link.click();
+      };
+    };
+
+    // // Add network to MetaMask
+    // document.getElementById('addNetwork').onclick = async () => {
+    //   if (!window.ethereum) {
+    //     alert("MetaMask not found");
+    //     return;
+    //   }
+    //   const chainId = document.getElementById('chainid').value.trim();
+    //   try {
+    //     const networks = {
+    //       "1": {
+    //         chainId: "0x1",
+    //         chainName: "Ethereum Mainnet",
+    //         nativeCurrency: { name: "Ether", symbol: "ETH", decimals: 18 },
+    //         rpcUrls: ["https://eth.llamarpc.com"],
+    //         blockExplorerUrls: ["https://etherscan.io"]
+    //       },
+    //       "56": {
+    //         chainId: "0x38",
+    //         chainName: "Binance Smart Chain",
+    //         nativeCurrency: { name: "BNB", symbol: "BNB", decimals: 18 },
+    //         rpcUrls: ["https://bsc-dataseed.binance.org/"],
+    //         blockExplorerUrls: ["https://bscscan.com"]
+    //       }
+    //     };
+
+    //     const network = networks[chainId];
+    //     if (!network) {
+    //       alert("Unsupported chain ID. Please enter a valid one (1, 56).");
+    //       return;
+    //     }
+
+    //     await window.ethereum.request({
+    //       method: "wallet_addEthereumChain",
+    //       params: [network]
+    //     });
+
+    //     alert(`${network.chainName} added to MetaMask ✅`);
+    //   } catch (err) {
+    //     console.error(err);
+    //     alert("Failed to add network: " + err.message);
+    //   }
+    // };
+  </script>
+</body>
+</html>
