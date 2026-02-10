@@ -2,3 +2,4 @@
 - npm install solc
 - Simple.sol
 - node compile.js
+- https://www.npmjs.com/package/solc
