@@ -14,28 +14,28 @@
 - WebSocket provider = Alchemy or QuickNode
 
 
-    // sniper-bot protection from block one
+     sniper-bot protection from block one
   
-    // anti-whale mechanics in the transfer logic
+     anti-whale mechanics in the transfer logic
     
-    // --------------- MEV sniping attack sequence---------------
+     --------------- MEV sniping attack sequence---------------
 
-    // Block N: Your AddLiquidity transaction is broadcast to the mempool
+     Block N: Your AddLiquidity transaction is broadcast to the mempool
   
-    // ↓
+     ↓
   
-    // Block N: A bot's RPC node sees it before it's confirmed
+     Block N: A bot's RPC node sees it before it's confirmed
   
-    // ↓
+     ↓
   
-    // Block N+1: Bot front-runs with a massive buy at near-zero price
+     Block N+1: Bot front-runs with a massive buy at near-zero price
   
-    // (using high gas to jump the queue)
+     (using high gas to jump the queue)
   
-    // ↓
+     ↓
   
-    // Block N+2: Real retail buyers start purchasing — price rises
+     Block N+2: Real retail buyers start purchasing — price rises
   
-    // ↓
+     ↓
   
-    // Block N+3: Bot dumps its entire position into those buyers
+     Block N+3: Bot dumps its entire position into those buyers
