@@ -4,8 +4,6 @@ pragma solidity ^0.8.34;
 contract Main {
     address public delegateContract;
     address[] public previousDelegates;
-
-    uint256 public total;
     event DelegateChanged(address oldAddress, address newAddress);
 
     constructor(address _delegateContract) {
