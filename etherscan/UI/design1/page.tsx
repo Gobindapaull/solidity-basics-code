@@ -91,10 +91,6 @@ export default function Home() {
                     <span className="text-xs text-blue-400">
                       {token.decimals} decimals
                     </span>
-
-                    <button className="text-xs px-3 py-1 bg-blue-600/20 rounded-lg hover:bg-blue-600/40 transition">
-                      View
-                    </button>
                   </div>
                 </div>
               </div>
