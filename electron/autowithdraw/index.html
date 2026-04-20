@@ -1,0 +1,159 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Crypto Sweeper Bot</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet" />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+
+      body {
+        height: 100vh;
+        background: linear-gradient(135deg, #1e1e2f, #2b5876, #4e4376);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .card {
+        width: 360px;
+        padding: 25px;
+        border-radius: 20px;
+        background: rgba(255, 255, 255, 0.08);
+        backdrop-filter: blur(15px);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        color: white;
+        text-align: center;
+      }
+
+      h2 {
+        margin-bottom: 20px;
+        font-weight: 600;
+      }
+
+      .input-group {
+        margin-bottom: 15px;
+        text-align: left;
+      }
+
+      label {
+        font-size: 13px;
+        opacity: 0.8;
+      }
+
+      input {
+        width: 100%;
+        padding: 12px;
+        margin-top: 5px;
+        border: none;
+        border-radius: 10px;
+        outline: none;
+        background: rgba(255, 255, 255, 0.1);
+        color: white;
+        font-size: 14px;
+      }
+
+      input::placeholder {
+        color: rgba(255, 255, 255, 0.6);
+      }
+
+      /* Buttons */
+      .btn {
+        width: 100%;
+        padding: 12px;
+        margin-top: 10px;
+        border: none;
+        border-radius: 10px;
+        font-size: 14px;
+        cursor: pointer;
+        transition: 0.3s;
+        color: white;
+      }
+
+      .start {
+        background: linear-gradient(135deg, #00c6ff, #0072ff);
+      }
+
+      .stop {
+        background: linear-gradient(135deg, #ff4d4d, #b30000);
+      }
+
+      .clear {
+        background: linear-gradient(135deg, #888, #444);
+      }
+
+      .btn:hover {
+        transform: scale(1.04);
+      }
+
+      /* Logs */
+      #logs {
+        margin-top: 15px;
+        height: 200px;
+        overflow-y: auto;
+        overflow-x: hidden;
+        text-align: left;
+        font-size: 12px;
+        padding: 12px;
+        border-radius: 12px;
+        background: rgba(0, 0, 0, 0.5);
+        font-family: monospace;
+        white-space: pre-wrap;
+        word-break: break-word;
+      }
+
+      .log {
+        margin-bottom: 8px;
+        line-height: 1.4;
+      }
+
+      .log-info { color: #00c6ff; }
+      .log-error { color: #ff4d4d; }
+
+      #logs::-webkit-scrollbar {
+        width: 6px;
+      }
+
+      #logs::-webkit-scrollbar-thumb {
+        background: #00c6ff;
+        border-radius: 10px;
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <div class="card">
+      <h2>Ξ Crypto Sweeper BOT</h2>
+
+      <div class="input-group">
+        <label>RPC URL</label>
+        <input type="text" id="rpc" placeholder="https://..." />
+      </div>
+
+      <div class="input-group">
+        <label>Private Key</label>
+        <input type="text" id="privatekey" placeholder="Enter Private Key"/>
+      </div>
+
+      <div class="input-group">
+        <label>Receiver Address</label>
+        <input type="text" id="receiver" placeholder="0x..." />
+      </div>
+
+      <button class="btn start" onclick="start()">🚀 Start</button>
+      <button class="btn stop" onclick="stop()">🛑 Stop</button>
+      <button class="btn clear" onclick="clearLogs()">🧹 Clear Logs</button>
+
+      <div id="logs"></div>
+    </div>
+
+    <script src="renderer.js"></script>
+  </body>
+</html>
