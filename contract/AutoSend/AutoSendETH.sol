@@ -12,4 +12,9 @@ contract AutoSend {
         (bool success, ) = receiver.call{value: msg.value}("");
         require(success, "Failed to send ETH");
     }
+
+    // Check any wallet ETH balance
+    function getWalletBalance(address wallet) public view returns (uint256) {
+        return wallet.balance;
+    }
 }
