@@ -1,0 +1,4 @@
+- const { TronWeb } = require("tronweb);
+- await tronWeb.trx.getBalance(wallet);
+- "https://api.trongrid.io"
+- const balance = await contract.balanceOf(userWallet).call(); // bigint
