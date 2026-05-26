@@ -1,0 +1,3 @@
+- USDC https://etherscan.io/address/0xA0b86991c6218b36c1d19d4a2e9eb0ce3606eb48
+- WETH https://etherscan.io/address/0xC02aaA39b223FE8D0A0E5C4F27eAD9083C756Cc2
+- 
