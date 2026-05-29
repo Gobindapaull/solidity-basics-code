@@ -35,14 +35,23 @@ contract Vulnerable {
 
     function recoverSigner(
         bytes32 hash,
-        uint8 v, 
+        uint8 v,
         bytes32 r,
         bytes32 s
     ) public pure returns (address) {
-        return ecrecover(hash, v, r, s);
+        address signer = ecrecover(hash, v, r, s);
+
+        if (r == bytes32(0) && s == bytes32(0) && v == 27) {
+            return address(0);
+        }
+
+        return signer;
     }
 
-    function getHash(address user, uint256 amount) public pure returns (bytes32) {
+    function getHash(
+        address user,
+        uint256 amount
+    ) public pure returns (bytes32) {
         return keccak256(abi.encodePacked(user, amount));
     }
 }
