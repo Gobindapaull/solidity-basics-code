@@ -1,0 +1,10 @@
+const text = `
+11111111111111111111111111111111
+So11111111111111111111111111111111111111112
+TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA
+JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN
+`;
+
+const sol = /\b[1-9A-HJ-NP-Za-km-z]{32,44}\b/g;
+
+console.log(text.match(sol));
