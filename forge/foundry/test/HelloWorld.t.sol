@@ -2,16 +2,16 @@
 pragma solidity ^0.8.13;
 
 import {Test} from "forge-std/Test.sol";
-import {Counter} from "../src/Counter.sol";
+import {HelloWorld} from "../src/HelloWorld.sol";
 
-contract CounterTest is Test {
-    Counter public counter;
+contract HelloWorldTest is Test {
+    HelloWorld public hello;
 
     function setUp() public {
-        counter = new Counter();
+        hello = new HelloWorld();
     }
 
     function testHello() public view {
-        assertEq(counter.hello(), "Hello World");
+        assertEq(hello.hello(), "Hello World");
     }
 }
