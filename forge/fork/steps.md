@@ -7,3 +7,6 @@
 - Ethereum Mainnet RPC = https://eth.blockrazor.xyz
 - anvil --fork-url https://eth.blockrazor.xyz
 - cast block-number --rpc-url http://127.0.0.1:8545
+- cast balance vitalik.eth --ether --rpc-url https://eth.blockrazor.xyz
+- find test -type f
+- 
