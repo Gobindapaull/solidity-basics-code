@@ -2,3 +2,8 @@
 - forge --version
 - anvil --version
 - cast --version
+- forge init forkmainnet
+- cd forkmainnet
+- Ethereum Mainnet RPC = https://eth.blockrazor.xyz
+- anvil --fork-url https://eth.blockrazor.xyz
+- 
