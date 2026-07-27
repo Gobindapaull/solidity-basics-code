@@ -1,1 +1,2 @@
+- anvil
 - forge script script/HelloWorld.s.sol --rpc-url http://127.0.0.1:8545
