@@ -1,0 +1,4 @@
+- Foundry mainnet fork
+- forge --version
+- anvil --version
+- cast --version
