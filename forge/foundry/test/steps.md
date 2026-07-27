@@ -1,8 +1,6 @@
-
-
-
-
-
-
+- forge init test
+- cd test
+- src/HelloWorld.sol
+- test/HelloWorld.t.sol
 - forge test -vv
 - forge test -vvvv
