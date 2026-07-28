@@ -1,0 +1,7 @@
+- https://docs.ethers.org/v6/getting-started/
+- npm init -y
+- npm i ethers
+- .env
+- ethers object
+- node index.js
+- sepolia etherscan
