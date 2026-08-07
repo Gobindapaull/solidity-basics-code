@@ -1,7 +1,7 @@
 const TronWeb = require('tronweb');
 const bip39 = require('bip39');
 const crypto = require('crypto');
-
+require("dotenv").config();
 
 
 async function mnemonicToPrivateKey(seedPhrase) {
@@ -40,7 +40,7 @@ async function mnemonicToPrivateKey(seedPhrase) {
 }
 
 (async () => {
-    const seedPhrase = "";
+    const seedPhrase = process.env.SEED_PHRASE;
 
     try {
         const privateKey = await mnemonicToPrivateKey(seedPhrase);
