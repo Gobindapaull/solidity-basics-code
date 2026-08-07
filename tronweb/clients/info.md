@@ -1,0 +1,3 @@
+- npm install
+- fill up .env file
+- node bot
