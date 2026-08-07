@@ -1,0 +1,8 @@
+- npm init -y
+- npm i dotenv ethers
+- touch .env bot.js
+- update .env bot.js
+- npm install
+- node bot
+- https://arb1.arbitrum.io/rpc
+- https://arbiscan.io/
