@@ -1,0 +1,8 @@
+- npm init -y
+- npm i dotenv ethers
+- touch .env bot.js
+- update .env bot.js
+- npm install
+- node bot
+- https://mainnet.optimism.io
+- https://optimistic.etherscan.io
