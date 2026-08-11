@@ -1,0 +1,8 @@
+- npm init -y
+- npm i dotenv ethers
+- touch .env bot.js
+- update .env bot.js
+- npm install
+- node bot
+- https://fantom.drpc.org
+- https://explorer.fantom.network/
