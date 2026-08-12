@@ -1,0 +1,11 @@
+- npm i dotenv ethers
+- npm init -y
+- touch .env bot.js
+- update .env bot.js
+- npm install
+- node bot
+- https://api.avax.network/ext/bc/C/rpc
+- https://snowscan.xyz/
+- Network name: Avalanche C-Chain
+- Chain ID: 43114
+- Native token: AVAX
