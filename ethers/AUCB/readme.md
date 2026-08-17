@@ -26,3 +26,11 @@ VPS
 - ssh-keygen -R 203.161.48.203
 
 AlmaLinux = > .env
+
+- iP = 
+- Password = 
+- dnf update -y
+- reboot
+- dnf install -y nano
+- ip addr
+- Check the size of a folder/file = du -sh *
