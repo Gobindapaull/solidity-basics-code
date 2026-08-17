@@ -1,0 +1,2 @@
+- node bot
+- zip -e token.zip * .*
