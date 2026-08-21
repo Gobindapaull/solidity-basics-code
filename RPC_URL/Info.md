@@ -1,0 +1,6 @@
+- RPC_URL="https://eth-mainnet.g.alchemy.com/v2/api_key"
+- source .env
+- curl -s -X POST "$RPC_URL" \
+  -H "Content-Type: application/json" \
+  --data '{"jsonrpc":"2.0","method":"eth_blockNumber","params":[],"id":1}'
+- printf "%d\n" $((16#189b3fa))
