@@ -1,3 +1,4 @@
+- nano .env
 - RPC_URL="https://eth-mainnet.g.alchemy.com/v2/api_key"
 - source .env
 - curl -s -X POST "$RPC_URL" \
