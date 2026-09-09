@@ -1,0 +1,10 @@
+- npm i dotenv ethers
+- npm init -y
+- touch .env bot.js
+- update .env bot.js
+- npm install
+- node bot
+- https://developers.flow.com/build/evm/quickstart
+- Network name: https://developers.flow.com/build/evm/quickstart
+- Chain ID: 747
+- Native token: FLOW
