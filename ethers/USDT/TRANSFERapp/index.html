@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Send USDT</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="usdt-logo">₮</div>
+
+        <h1>Send USDT</h1>
+
+        <button id="connectButton">
+            Connect Wallet
+        </button>
+
+        <input
+            type="text"
+            id="receiver"
+            placeholder="Receiver address"
+        >
+
+        <input
+            type="number"
+            id="amount"
+            placeholder="Amount (USDT)"
+            min="0"
+            step="any"
+        >
+
+        <button id="sendButton">
+            Send USDT
+        </button>
+
+        <p id="status"></p>
+
+    </div>
+
+    <!-- ethers.js v6 -->
+    <script type="module" src="script.js"></script>
+
+</body>
+</html>
