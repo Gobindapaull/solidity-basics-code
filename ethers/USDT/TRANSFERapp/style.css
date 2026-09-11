@@ -1,0 +1,84 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: white;
+}
+
+.container {
+    width: 90%;
+    max-width: 550px;
+    margin: 40px auto;
+}
+
+.usdt-logo {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 40px;
+
+    border-radius: 50%;
+    background: #26a17b;
+
+    color: white;
+    font-size: 65px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    text-align: center;
+    font-size: 42px;
+    margin-bottom: 40px;
+    color: #101828;
+}
+
+input {
+    width: 100%;
+    height: 65px;
+
+    margin-bottom: 18px;
+    padding: 0 20px;
+
+    border: 2px solid #d9e1e8;
+    border-radius: 30px;
+
+    font-size: 18px;
+    outline: none;
+}
+
+input:focus {
+    border-color: #1473e6;
+}
+
+button {
+    width: 100%;
+    height: 60px;
+
+    margin-bottom: 18px;
+
+    border: none;
+    border-radius: 30px;
+
+    background: #0877ed;
+    color: white;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0668d4;
+}
+
+#status {
+    text-align: center;
+    word-break: break-word;
+    font-size: 14px;
+}
