@@ -5,4 +5,10 @@
 - successful
 - withdraw profit
 - ethfree175
-
+- AI trading agent
+- Passive income
+- making money online
+- 3.25 ETH
+- compile and deploy smart contracts
+- solidity version
+- minimum starting amount : 1 ETH
