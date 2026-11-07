@@ -1,0 +1,5 @@
+- npm init -y
+- npm i dotenv ethers
+- touch .env approve.js
+- edit .env
+- node approve.js
