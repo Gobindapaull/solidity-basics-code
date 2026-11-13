@@ -1,0 +1,15 @@
+{
+  "name": "instantlive789",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "type": "commonjs",
+  "dependencies": {
+    "dotenv": "^18.0.10",
+    "tronweb": "^6.5.1"
+  }
+}
